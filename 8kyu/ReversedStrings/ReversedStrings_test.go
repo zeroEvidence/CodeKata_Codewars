@@ -8,5 +8,7 @@ import (
 )
 
 var _ = Describe("ReversedStrings", func() {
-
+	It("should test that the solution returns the correct value", func() {
+		Expect(ReversedStrings("world")).To(Equal("dlrow"))
+	})
 })
