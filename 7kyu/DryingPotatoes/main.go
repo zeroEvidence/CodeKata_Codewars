@@ -3,5 +3,10 @@ package kata_drying_potatoes
 import "math"
 
 func Potatoes(p0, w0, p1 int) int {
-	return int(math.Floor((float64(w0) * (100 - float64(p1))) / (100 - float64(p0))))
+	var dryWeightBefore = 100 - float64(p0)
+	var dryWeightAfter = 100 - float64(p1)
+	var weight = float64(w0)
+	var weightAfter = weight * dryWeightAfter / dryWeightBefore
+
+	return int(math.Floor(weightAfter))
 }

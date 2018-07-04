@@ -13,6 +13,8 @@ func dotest(p0, w0, p1 int, exp int) {
 }
 
 var _ = Describe("DryingPotatoes", func() {
-	dotest(99, 100, 98, 50)
-	dotest(82, 127, 80, 114)
+	It("Should handle basic cases", func() {
+		dotest(99, 100, 98, 50)
+		dotest(82, 127, 80, 114)
+	})
 })
